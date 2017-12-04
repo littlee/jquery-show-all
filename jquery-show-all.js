@@ -84,6 +84,7 @@
         $parent.css(styles)
       } else {
         styles.margin = 'auto'
+        styles.position = 'absolute'
         if (options.horizontalAlign) {
           styles.left = 0
           styles.right = 0
