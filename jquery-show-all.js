@@ -25,7 +25,6 @@
   }, false)
 
   $.fn.showAll = function(rWidth, rHeight, options) {
-    console.log(typeof rWidth)
     if (typeof rWidth !== 'number' || rWidth <= 0) {
       throw Error('Ratio width should be a positive number')
     }
