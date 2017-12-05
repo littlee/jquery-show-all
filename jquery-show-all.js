@@ -25,6 +25,7 @@
   }, false)
 
   $.fn.showAll = function(rWidth, rHeight, options) {
+    console.log(typeof rWidth)
     if (typeof rWidth !== 'number' || rWidth <= 0) {
       throw Error('Ratio width should be a positive number')
     }
@@ -103,6 +104,14 @@
 
   $('[data-show-all]').each(function() {
     var $this = $(this)
-    $this.showAll($this.data('width'), $this.data('height'))
+    var dataConfig = $this.data()
+    if (dataConfig.horizontalAlign) {
+      dataConfig.horizontalAlign = dataConfig.horizontalAlign === 'true'
+      dataConfig.verticalAlign = dataConfig.verticalAlign === 'true' 
+    }
+    $this.showAll(dataConfig.width, dataConfig.height, {
+      horizontalAlign: dataConfig.horizontalAlign,
+      verticalAlign: dataConfig.verticalAlign
+    })
   })
 })(jQuery)

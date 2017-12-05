@@ -14,5 +14,5 @@ $('#myDiv').showAll(16, 9, {
 or
 
 ```html
-<div data-show-all data-width="16" data-height="9"></div>
+<div data-show-all data-width="16" data-height="9" data-vertical-align="true" data-horizontal-align="true"></div>
 ```
